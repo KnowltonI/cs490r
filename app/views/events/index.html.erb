@@ -1,0 +1,8 @@
+<h1>List of Events</h1>
+<% if notice %>
+	<p class="noticeLink"><%= notice %></p>
+<% end %>
+
+<%= link_to 'Create New Event', new_event_path %>
+<br>
+<%= render @events %>

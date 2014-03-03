@@ -1,0 +1,29 @@
+
+<%= form_for @event do |f| %>
+	<% if @event.errors.any? %>
+		<div class="error_explanation">
+		<h3><%= pluralize(@event.errors.count, "error") %>
+		sorry :( event could not be saved:</h3>
+
+			<ul>
+			<% @event.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+			<% end %>
+			</ul>
+		</div>
+	<% end %>
+
+	<%= f.label :name %>
+	<%= f.text_field :name %><br>
+	<%= f.label :notes %><br>
+	<%= f.text_area :notes, size: "25x6" %><br><br>
+	<%= f.label :due_date %>
+	<%= f.date_select :due_date %><br>
+	<%= f.label :due_time, ampm: true %>
+	<%= f.time_select :due_time %><br>
+	<%= f.label :priority %>
+	<%= f.number_field :priority %><br>
+	<br>
+	<%= f.submit  "Done" %>
+
+<% end %>

@@ -1,0 +1,6 @@
+<%= form_for [@event, @comment] do |f| %>
+	<%= f.error_messages %>
+	<%= f.label :contents %>
+	<%= f.text_field :contents %><br>
+	<%= f.submit  "Done" %>
+<% end %>

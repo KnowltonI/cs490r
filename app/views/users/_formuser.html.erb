@@ -1,0 +1,13 @@
+<div class="jumbotron">
+	<legend>Register an Account</legend>
+	<%= bootstrap_form_for(@user, layout: :horizontal, label_col: "col-sm-2", control_col: "col-sm-10") do |f| %>
+		<%= f.alert_message "Oops got some errors" %>
+		<%= f.text_field :name, label: "Username:", placeholder: 'Username' %>
+		<%= f.text_field :email, label: "Email", placeholder: 'Email' %>
+		<%= f.password_field :password, label: "Password", placeholder: 'Password' %>
+		<%= f.password_field :password_confirmation, label: "Confirm Password", placeholder: 'Confirmation' %>
+			<div class="form-group">
+				<%= f.submit 'Submit', class: 'btn btn-primary'%>
+			</div>
+	<% end %>
+</div>

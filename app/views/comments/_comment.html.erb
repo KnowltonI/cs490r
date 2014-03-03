@@ -1,0 +1,6 @@
+<%= div_for comment do %>
+	<p><%= comment.contents %></p>
+	<p>
+		<%= link_to 'Edit', edit_event_comment_path(@event,comment) %> |
+		<%= link_to 'Delete', event_comment_path(@event,comment), method: :delete, confirm: 'Are you sua?' %>
+<% end %>
