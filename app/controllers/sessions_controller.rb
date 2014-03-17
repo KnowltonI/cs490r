@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
   		login(user)
   		redirect_to redirect_path, notice: 'Logged In'
   	else
-  		redirect_to sign_in_path, alert: 'Invalid username/password'
+  		redirect_to sign_in_path, alert: 'Invalid Email/Password'
   	end
   end
 

@@ -38,6 +38,8 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 
 gem 'bootstrap-sass'
 gem 'bootstrap_form'
+gem 'fullcalendar-rails'
+gem 'jquery-qtip2-rails'
 
 group :development do
 	gem 'rails_layout'

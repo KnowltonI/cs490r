@@ -3,7 +3,13 @@ class EventsController < ApplicationController
   before_action :authorize
   
   def index
-  	@events = Event.all
+  	@events = Event.scoped
+    @events = Event.between(params[:start], params[:end]) 
+    if (params[:start] && params[:end])
+      respond_to |format|
+        format.html # index.html.erb
+        format.json { render :json => events }
+    end
   end
 
   def new
@@ -46,7 +52,6 @@ class EventsController < ApplicationController
   	end
 
   	def event_params
-  		params.require(:event).permit(:name, :notes, :due_date, :due_time, :priority)
+  		params.require(:event).permit(:title, :description, :start, :end, :allDay)
   	end
-
 end

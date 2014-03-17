@@ -12,6 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require fullcalendar
+//= require jquery.qtip.js
 //= require turbolinks
 //= require bootstrap
 //= require_tree .
+//= require fullcalendar_engine/application

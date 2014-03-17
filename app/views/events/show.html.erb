@@ -1,12 +1,10 @@
 <%= link_to 'Home', events_path %> -->
 <%= link_to 'Edit', edit_event_path(@event) %>
 
-<% title @event.name %>
+<% title @event.title %>
 
 <%= render @event %>
 
 <br>
 <h3>Comments</h3>
-
-<%= render @event.comments %>
 

@@ -1,6 +1,5 @@
 <%# add navigation links to this file %>
 <% if current_user %>
-    <%= link_to 'Events', events_path, class: 'navbar-brand' %>
     <%= link_to 'Profile', edit_profile_path, class: 'navbar-brand' %>
     <%= link_to 'Sign Out', sign_out_path, class: 'navbar-brand' %>
     <% else %>
